@@ -114,9 +114,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-8 text-base md:text-xl font-medium text-white/70 leading-relaxed tracking-wide max-w-xl">
-            Twintok과 함께 당신의 콘텐츠 가치를 극대화하세요.
-            <br />
-            데이터 기반 성장을 돕는 크리에이터 필수 플랫폼.
+            Twintok과 함께 나만의 AI 아바타를 만들어 팬들과 소통해보세요!
           </p>
 
           <button
@@ -145,72 +143,78 @@ export default function Home() {
           </h2>
 
           {/* Feature 1 - Phone left, text right */}
-          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20 mb-32">
-            <div className="relative w-[280px] md:w-[360px] h-[500px] md:h-[640px] shrink-0">
-              <Image
-                src="/images/phone1.png"
-                alt="AI 아바타 채팅 화면"
-                fill
-                className="object-contain"
-              />
-            </div>
-            <div className="text-center md:text-left">
-              <h3 className="text-2xl md:text-[40px] font-black text-[#AD46FF] leading-tight mb-6">
-                언어와 물리적 장벽을 넘어 팬들과 소통
-              </h3>
-              <p className="text-lg md:text-2xl font-black text-white leading-relaxed">
-                트윈톡의 아바타는 LLM이 제공하는 모든 언어를 구사합니다.
-                <br />
-                글로벌 팬들과 언어의 장벽을 넘어 소통이 가능합니다.
-              </p>
+          <div className="flex justify-center mb-32">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 w-full max-w-5xl">
+              <div className="relative w-[280px] md:w-[360px] h-[500px] md:h-[640px] shrink-0">
+                <Image
+                  src="/images/phone1.png"
+                  alt="AI 아바타 채팅 화면"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="text-center max-w-xl">
+                <h3 className="text-2xl md:text-[40px] font-black text-[#AD46FF] leading-tight mb-6">
+                  언어와 물리적 장벽을 넘어 팬들과 소통
+                </h3>
+                <p className="text-lg md:text-2xl font-black text-white leading-relaxed">
+                  트윈톡의 아바타는 LLM이 제공하는 모든 언어를 구사합니다.
+                  <br />
+                  글로벌 팬들과 언어의 장벽을 넘어 소통이 가능합니다.
+                </p>
+              </div>
             </div>
           </div>
 
           {/* Feature 2 - Text left, phone right */}
-          <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-20 mb-32">
-            <div className="text-center md:text-left">
-              <h3 className="text-2xl md:text-[40px] font-black text-[#0184FF] leading-tight mb-6">
-                실사 그대로의 아바타!
-              </h3>
-              <p className="text-lg md:text-2xl font-black text-white leading-relaxed">
-                트윈톡의 아바타는 캐릭터가 아닌, 실존 인물과 동일하며
-                <br />
-                목소리까지 닮은 실시간 상호작용이 가능한
-                <br />
-                아바타를 생성합니다!
-              </p>
-            </div>
-            <div className="relative w-[200px] md:w-[260px] h-[400px] md:h-[470px] shrink-0">
-              <Image
-                src="/images/phone2.png"
-                alt="실사 아바타 화면"
-                fill
-                className="object-contain"
-              />
+          <div className="flex justify-center mb-32">
+            <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-12 md:gap-20 w-full max-w-5xl">
+              <div className="text-center max-w-xl">
+                <h3 className="text-2xl md:text-[40px] font-black text-[#0184FF] leading-tight mb-6">
+                  실사 그대로의 아바타!
+                </h3>
+                <p className="text-lg md:text-2xl font-black text-white leading-relaxed">
+                  트윈톡의 아바타는 캐릭터가 아닌, 실존 인물과 동일하며
+                  <br />
+                  목소리까지 닮은 실시간 상호작용이 가능한
+                  <br />
+                  아바타를 생성합니다!
+                </p>
+              </div>
+              <div className="relative w-[200px] md:w-[260px] h-[400px] md:h-[470px] shrink-0">
+                <Image
+                  src="/images/phone2.png"
+                  alt="실사 아바타 화면"
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </div>
           </div>
 
           {/* Feature 3 - Phone left, text right */}
-          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
-            <div className="relative w-[200px] md:w-[260px] h-[370px] md:h-[470px] shrink-0">
-              <Image
-                src="/images/phone3.png"
-                alt="말투와 성격 설정 화면"
-                fill
-                className="object-contain"
-              />
-            </div>
-            <div className="text-center md:text-left">
-              <h3 className="text-2xl md:text-[40px] font-black text-[#AD46FF] leading-tight mb-6">
-                말투와 성격까지 구현된다고?
-              </h3>
-              <p className="text-lg md:text-2xl font-black text-white leading-relaxed">
-                트윈톡의 아바타는 LLM 활용 기술을 통해 의도된 말투와
-                <br />
-                성격을 지정할 수 있고, 음담패설 또는 불필요한 정보를 제한하여
-                <br />
-                보다 안전하게 사용할 수 있습니다.
-              </p>
+          <div className="flex justify-center">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 w-full max-w-5xl">
+              <div className="relative w-[200px] md:w-[260px] h-[370px] md:h-[470px] shrink-0">
+                <Image
+                  src="/images/phone3.png"
+                  alt="말투와 성격 설정 화면"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="text-center max-w-xl">
+                <h3 className="text-2xl md:text-[40px] font-black text-[#AD46FF] leading-tight mb-6">
+                  말투와 성격까지 구현된다고?
+                </h3>
+                <p className="text-lg md:text-2xl font-black text-white leading-relaxed">
+                  트윈톡의 아바타는 LLM 활용 기술을 통해 의도된 말투와
+                  <br />
+                  성격을 지정할 수 있고, 음담패설 또는 불필요한 정보를 제한하여
+                  <br />
+                  보다 안전하게 사용할 수 있습니다.
+                </p>
+              </div>
             </div>
           </div>
         </div>
