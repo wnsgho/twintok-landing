@@ -48,20 +48,20 @@ export default function Home() {
             src="/images/logo.png"
             alt="Twintok"
             fill
-            className="object-contain object-left"
+            className="object-contain object-left max-w-[100px]"
             priority
           />
         </div>
         <nav className="flex items-center gap-6">
           <button
             onClick={() => scrollTo("service")}
-            className="text-sm font-medium text-white/80 hover:text-white transition-colors cursor-pointer"
+            className="min-w-[80px] w-full text-sm font-medium text-white/80 hover:text-white transition-colors cursor-pointer"
           >
             서비스 소개
           </button>
           <button
             onClick={() => scrollTo("footer")}
-            className="text-sm font-medium text-white/80 hover:text-white transition-colors cursor-pointer"
+            className="min-w-[80px] text-sm font-medium text-white/80 hover:text-white transition-colors cursor-pointer"
           >
             컨택트
           </button>
@@ -157,7 +157,7 @@ export default function Home() {
                 <h3 className="text-2xl md:text-[40px] font-black text-[#AD46FF] leading-tight mb-6">
                   언어와 물리적 장벽을 넘어 팬들과 소통
                 </h3>
-                <p className="text-lg md:text-2xl font-black text-white leading-relaxed">
+                <p className="text-lg font-black text-white leading-relaxed">
                   트윈톡의 아바타는 LLM이 제공하는 모든 언어를 구사합니다.
                   <br />
                   글로벌 팬들과 언어의 장벽을 넘어 소통이 가능합니다.
@@ -173,7 +173,7 @@ export default function Home() {
                 <h3 className="text-2xl md:text-[40px] font-black text-[#0184FF] leading-tight mb-6">
                   실사 그대로의 아바타!
                 </h3>
-                <p className="text-lg md:text-2xl font-black text-white leading-relaxed">
+                <p className="text-lg font-black text-white leading-relaxed">
                   트윈톡의 아바타는 캐릭터가 아닌, 실존 인물과 동일하며
                   <br />
                   목소리까지 닮은 실시간 상호작용이 가능한
@@ -207,7 +207,7 @@ export default function Home() {
                 <h3 className="text-2xl md:text-[40px] font-black text-[#AD46FF] leading-tight mb-6">
                   말투와 성격까지 구현된다고?
                 </h3>
-                <p className="text-lg md:text-2xl font-black text-white leading-relaxed">
+                <p className="text-lg font-black text-white leading-relaxed">
                   트윈톡의 아바타는 LLM 활용 기술을 통해 의도된 말투와
                   <br />
                   성격을 지정할 수 있고, 음담패설 또는 불필요한 정보를 제한하여
@@ -232,7 +232,7 @@ export default function Home() {
                 src="/images/logo.png"
                 alt="Twintok"
                 fill
-                className="object-contain object-left"
+                className="object-contain object-left max-w-[100px]"
               />
             </div>
             <p className="text-base font-medium text-white/40 leading-relaxed">
