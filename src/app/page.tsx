@@ -145,7 +145,7 @@ export default function Home() {
           {/* Feature 1 - Phone left, text right */}
           <div className="flex justify-center mb-32">
             <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 w-full max-w-5xl">
-              <div className="relative w-[280px] md:w-[360px] h-[500px] md:h-[640px] shrink-0">
+              <div className="relative w-[360px] md:w-[470px] h-[650px] md:h-[830px] shrink-0">
                 <Image
                   src="/images/phone1.png"
                   alt="AI 아바타 채팅 화면"
@@ -155,9 +155,11 @@ export default function Home() {
               </div>
               <div className="text-center max-w-xl">
                 <h3 className="text-2xl md:text-[40px] font-black text-[#AD46FF] leading-tight mb-6">
-                  언어와 물리적 장벽을 넘어 팬들과 소통
+                  시공간과 언어의 장벽을 넘어
+                  <br />
+                  팬들과 소통하다!
                 </h3>
-                <p className="text-lg font-black text-white leading-relaxed">
+                <p className="text-lg font-normal text-white leading-relaxed">
                   트윈톡의 아바타는 LLM이 제공하는 모든 언어를 구사합니다.
                   <br />
                   글로벌 팬들과 언어의 장벽을 넘어 소통이 가능합니다.
@@ -173,7 +175,7 @@ export default function Home() {
                 <h3 className="text-2xl md:text-[40px] font-black text-[#0184FF] leading-tight mb-6">
                   실사 그대로의 아바타!
                 </h3>
-                <p className="text-lg font-black text-white leading-relaxed">
+                <p className="text-lg font-normal text-white leading-relaxed">
                   트윈톡의 아바타는 캐릭터가 아닌, 실존 인물과 동일하며
                   <br />
                   목소리까지 닮은 실시간 상호작용이 가능한
@@ -181,7 +183,7 @@ export default function Home() {
                   아바타를 생성합니다!
                 </p>
               </div>
-              <div className="relative w-[200px] md:w-[260px] h-[400px] md:h-[470px] shrink-0">
+              <div className="relative w-[260px] md:w-[340px] h-[520px] md:h-[610px] shrink-0">
                 <Image
                   src="/images/phone2.png"
                   alt="실사 아바타 화면"
@@ -195,7 +197,7 @@ export default function Home() {
           {/* Feature 3 - Phone left, text right */}
           <div className="flex justify-center">
             <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 w-full max-w-5xl">
-              <div className="relative w-[200px] md:w-[260px] h-[370px] md:h-[470px] shrink-0">
+              <div className="relative w-[260px] md:w-[340px] h-[480px] md:h-[610px] shrink-0">
                 <Image
                   src="/images/phone3.png"
                   alt="말투와 성격 설정 화면"
@@ -207,7 +209,7 @@ export default function Home() {
                 <h3 className="text-2xl md:text-[40px] font-black text-[#AD46FF] leading-tight mb-6">
                   말투와 성격까지 구현된다고?
                 </h3>
-                <p className="text-lg font-black text-white leading-relaxed">
+                <p className="text-lg font-normal text-white leading-relaxed">
                   트윈톡의 아바타는 LLM 활용 기술을 통해 의도된 말투와
                   <br />
                   성격을 지정할 수 있고, 음담패설 또는 불필요한 정보를 제한하여
@@ -236,7 +238,9 @@ export default function Home() {
               />
             </div>
             <p className="text-base font-medium text-white/40 leading-relaxed">
-              크리에이터를 더 스마트하게 만드는 힘, Twintok과 함께 하세요.
+              크리에이터를 더 스마트하게 만드는 힘,
+              <br />
+              트윈톡
             </p>
           </div>
           <div className="text-base font-medium text-white/40 leading-relaxed">
