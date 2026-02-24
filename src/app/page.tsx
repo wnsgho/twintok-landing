@@ -145,7 +145,7 @@ export default function Home() {
           {/* Feature 1 - Phone left, text right */}
           <div className="flex justify-center mb-32">
             <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 w-full max-w-5xl">
-              <div className="relative w-[360px] md:w-[470px] h-[650px] md:h-[830px] shrink-0">
+              <div className="relative w-[440px] md:w-[560px] h-[780px] md:h-[1000px] shrink-0">
                 <Image
                   src="/images/phone1.png"
                   alt="AI 아바타 채팅 화면"
@@ -183,7 +183,7 @@ export default function Home() {
                   아바타를 생성합니다!
                 </p>
               </div>
-              <div className="relative w-[260px] md:w-[340px] h-[520px] md:h-[610px] shrink-0">
+              <div className="relative w-[440px] md:w-[560px] h-[780px] md:h-[1000px] shrink-0">
                 <Image
                   src="/images/phone2.png"
                   alt="실사 아바타 화면"
@@ -197,7 +197,7 @@ export default function Home() {
           {/* Feature 3 - Phone left, text right */}
           <div className="flex justify-center">
             <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 w-full max-w-5xl">
-              <div className="relative w-[260px] md:w-[340px] h-[480px] md:h-[610px] shrink-0">
+              <div className="relative w-[440px] md:w-[560px] h-[780px] md:h-[1000px] shrink-0">
                 <Image
                   src="/images/phone3.png"
                   alt="말투와 성격 설정 화면"
