@@ -2,38 +2,6 @@
 
 import Image from "next/image";
 
-const avatars = [
-  "/images/avatar1.png",
-  "/images/avatar2.png",
-  "/images/avatar3.png",
-  "/images/avatar4.png",
-  "/images/avatar5.png",
-  "/images/avatar6.png",
-  "/images/avatar7.png",
-  "/images/avatar8.png",
-  "/images/avatar9.png",
-];
-
-const avatarGrid = [
-  [0, 1, 2, 3, 4, 5, 6, 7],
-  [8, 0, 1, 2, 3, 4, 5, 6],
-  [7, 8, 0, 1, 2, 3, 4, 5],
-  [6, 7, 8, 0, 1, 2, 3, 4],
-  [5, 6, 7, 8, 0, 1, 2, 3],
-];
-
-const opacityMap: Record<number, string> = {
-  0: "opacity-5",
-  1: "opacity-0",
-  2: "opacity-15",
-  3: "opacity-30",
-  4: "opacity-50",
-  5: "opacity-80",
-  6: "opacity-45",
-  7: "opacity-10",
-  8: "opacity-65",
-};
-
 function scrollTo(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 }
@@ -70,46 +38,18 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative h-screen w-full overflow-hidden bg-black">
-        {/* Avatar Background Grid */}
-        <div className="absolute inset-0 opacity-40 overflow-hidden">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="rotate-12 scale-125">
-              <div className="grid grid-rows-5 gap-4 p-8">
-                {avatarGrid.map((row, rowIdx) => (
-                  <div key={rowIdx} className="flex gap-4 justify-center">
-                    {row.map((avatarIdx, colIdx) => (
-                      <div
-                        key={`${rowIdx}-${colIdx}`}
-                        className={`relative w-[90px] h-[90px] md:w-[110px] md:h-[110px] rounded-full overflow-hidden border border-white/5 shrink-0 ${opacityMap[avatarIdx] ?? "opacity-30"}`}
-                      >
-                        <Image
-                          src={avatars[avatarIdx]}
-                          alt=""
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black" />
-        </div>
-
         {/* Hero Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
           <h1 className="text-5xl md:text-[96px] font-black leading-tight md:leading-[1.15] tracking-tight">
-            <span className="block">크리에이터를</span>
+            <span className="block mb-2">또 다른 나를</span>
             <span
-              className="block bg-clip-text text-transparent"
+              className="block bg-clip-text text-transparent pb-2"
               style={{
                 backgroundImage:
                   "linear-gradient(180deg, #30A9FF 0%, #A855F7 50%, #F000FF 100%)",
               }}
             >
-              더 스마트하게!
+              크리에이트하다!
             </span>
           </h1>
 
@@ -135,47 +75,46 @@ export default function Home() {
       </section>
 
       {/* Service Section */}
-      <section id="service" className="bg-black py-24 px-6 md:px-10">
-        <div className="max-w-6xl mx-auto">
+      <section id="service" className="bg-black py-16 md:py-24 px-6 md:px-10">
+        <div className="max-w-[1200px] mx-auto">
           {/* Section Title */}
-          <h2 className="text-3xl md:text-5xl font-black text-center tracking-tight mb-20 leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-center tracking-tight mb-20 lg:mb-32 leading-tight">
             나만의 AI 아바타를 만들어 팬들과 소통해보세요!
           </h2>
 
-          {/* Feature 1 - Phone left, text right */}
-          <div className="flex justify-center mb-32">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 w-full max-w-5xl">
-              <div className="relative w-[360px] md:w-[470px] h-[650px] md:h-[830px] shrink-0">
+          {/* Desktop Overlapping Flex Rows */}
+          <div className="hidden md:flex flex-col items-center w-full">
+            {/* Feature 1 - 시공간 장벽 (Text Right, Image Left) */}
+            <div className="flex flex-row items-center justify-center gap-12 lg:gap-24 w-full">
+              <div className="relative w-[340px] lg:w-[420px] aspect-[418/743] shrink-0">
                 <Image
-                  src="/images/phone1.png"
-                  alt="AI 아바타 채팅 화면"
+                  src="/images/875_1x_shots_so 1.svg"
+                  alt="글로벌 소통 화면"
                   fill
                   className="object-contain"
                 />
               </div>
-              <div className="text-center max-w-xl">
-                <h3 className="text-2xl md:text-[40px] font-black text-[#AD46FF] leading-tight mb-6">
+              <div className="text-center w-[350px] lg:w-[420px]">
+                <h3 className="text-3xl lg:text-[40px] font-black text-[#AD46FF] leading-tight mb-6 tracking-tight">
                   시공간과 언어의 장벽을 넘어
                   <br />
                   팬들과 소통하다!
                 </h3>
-                <p className="text-lg font-normal text-white leading-relaxed">
+                <p className="text-base lg:text-lg font-medium text-white/90 leading-relaxed lg:leading-[2]">
                   트윈톡의 아바타는 LLM이 제공하는 모든 언어를 구사합니다.
                   <br />
                   글로벌 팬들과 언어의 장벽을 넘어 소통이 가능합니다.
                 </p>
               </div>
             </div>
-          </div>
 
-          {/* Feature 2 - Text left, phone right */}
-          <div className="flex justify-center mb-32">
-            <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-12 md:gap-20 w-full max-w-5xl">
-              <div className="text-center max-w-xl">
-                <h3 className="text-2xl md:text-[40px] font-black text-[#0184FF] leading-tight mb-6">
+            {/* Feature 2 - 실사 아바타 (Text Left, Image Right) */}
+            <div className="flex flex-row items-center justify-center gap-12 lg:gap-24 w-full -mt-24 lg:-mt-64 relative z-10 pointer-events-none">
+              <div className="text-center w-[350px] lg:w-[420px] pointer-events-auto">
+                <h3 className="text-3xl lg:text-[40px] font-black text-[#0184FF] leading-tight mb-6 tracking-tight">
                   실사 그대로의 아바타!
                 </h3>
-                <p className="text-lg font-normal text-white leading-relaxed">
+                <p className="text-base lg:text-lg font-medium text-white/90 leading-relaxed lg:leading-[2]">
                   트윈톡의 아바타는 캐릭터가 아닌, 실존 인물과 동일하며
                   <br />
                   목소리까지 닮은 실시간 상호작용이 가능한
@@ -183,10 +122,63 @@ export default function Home() {
                   아바타를 생성합니다!
                 </p>
               </div>
-              <div className="relative w-[360px] md:w-[470px] h-[650px] md:h-[830px] shrink-0">
+              <div className="relative w-[340px] lg:w-[420px] aspect-[418/743] shrink-0 pointer-events-auto">
                 <Image
-                  src="/images/phone2.png"
+                  src="/images/523_1x_shots_so 1.svg"
                   alt="실사 아바타 화면"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </div>
+
+            {/* Feature 3 - 말투와 성격 (Text Right, Image Left) */}
+            <div className="flex flex-row items-center justify-center gap-12 lg:gap-24 w-full -mt-24 lg:-mt-64 relative z-20 pointer-events-none">
+              <div className="relative w-[340px] lg:w-[420px] aspect-[418/743] shrink-0 pointer-events-auto">
+                <Image
+                  src="/images/546_1x_shots_so 1.svg"
+                  alt="말투와 성격 설정 화면"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="text-center w-[350px] lg:w-[420px] pointer-events-auto">
+                <h3 className="text-3xl lg:text-[40px] font-black text-[#AD46FF] leading-tight mb-6 tracking-tight">
+                  말투와 성격까지 구현된다고?
+                </h3>
+                <p className="text-base lg:text-lg font-medium text-white/90 leading-relaxed lg:leading-[2]">
+                  트윈톡의 아바타는 LLM 활용 기술을 통해 의도된 말투와
+                  <br />
+                  성격을 지정할 수 있으며, 음담패설 또는 불필요한 정보를
+                  제한하여
+                  <br />
+                  보다 안전하게 사용할 수 있습니다.
+                </p>
+              </div>
+            </div>
+
+            {/* Feature 4 - 24시간 워커 (Text Left, Image Right) */}
+            <div className="flex flex-row items-center justify-center gap-12 lg:gap-24 w-full -mt-24 lg:-mt-64 relative z-30 pointer-events-none">
+              <div className="text-center w-[350px] lg:w-[420px] pointer-events-auto">
+                <h3 className="text-3xl lg:text-[40px] font-black text-[#0184FF] leading-tight mb-6 tracking-tight">
+                  언제 어디서나 24시간 일하는
+                  <br />
+                  AI 아바타!
+                </h3>
+                <p className="text-base lg:text-lg font-medium text-white/90 leading-relaxed lg:leading-[2]">
+                  AI 아바타라는 새로운 무기로, 팬들과의 소통으로 새로운
+                  수익구조를
+                  <br />
+                  만들어갈 수 있습니다. 또한, 아바타에게 비지니스 정보를
+                  주입하여
+                  <br />
+                  CS 및 세일즈 담당자로도 사용해 보세요!
+                </p>
+              </div>
+              <div className="relative w-[340px] lg:w-[420px] aspect-[418/743] shrink-0 pointer-events-auto">
+                <Image
+                  src="/images/909_1x_shots_so 1.svg"
+                  alt="24시간 일하는 AI 아바타 화면"
                   fill
                   className="object-contain"
                 />
@@ -194,28 +186,114 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Feature 3 - Phone left, text right */}
-          <div className="flex justify-center">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 w-full max-w-5xl">
-              <div className="relative w-[360px] md:w-[470px] h-[650px] md:h-[830px] shrink-0">
+          {/* Mobile Single-Column Layout */}
+          <div className="flex flex-col md:hidden gap-y-16">
+            {/* Section 1 */}
+            <div className="flex flex-col items-center gap-6">
+              <div className="relative w-full max-w-[320px] aspect-[418/743]">
                 <Image
-                  src="/images/phone3.png"
+                  src="/images/875_1x_shots_so 1.svg"
+                  alt="글로벌 소통 화면"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="text-center -mt-8 relative z-10 pointer-events-none">
+                <div className="pointer-events-auto">
+                  <h3 className="text-2xl font-black text-[#AD46FF] leading-tight mb-3">
+                    시공간과 언어의 장벽을 넘어
+                    <br />
+                    팬들과 소통하다!
+                  </h3>
+                  <p className="text-base font-medium text-white/90 leading-relaxed">
+                    트윈톡의 아바타는 LLM이 제공하는 모든 언어를 구사합니다.
+                    <br />
+                    글로벌 팬들과 언어의 장벽을 넘어 소통이 가능합니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Section 2 */}
+            <div className="flex flex-col items-center gap-6">
+              <div className="text-center relative z-10 pointer-events-none">
+                <div className="pointer-events-auto">
+                  <h3 className="text-2xl font-black text-[#0184FF] leading-tight mb-3">
+                    실사 그대로의 아바타!
+                  </h3>
+                  <p className="text-base font-medium text-white/90 leading-relaxed">
+                    트윈톡의 아바타는 캐릭터가 아닌, 실존 인물과 동일하며
+                    <br />
+                    목소리까지 닮은 실시간 상호작용이 가능한
+                    <br />
+                    아바타를 생성합니다!
+                  </p>
+                </div>
+              </div>
+              <div className="relative w-full max-w-[320px] aspect-[418/743] -mt-8">
+                <Image
+                  src="/images/523_1x_shots_so 1.svg"
+                  alt="실사 아바타 화면"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </div>
+
+            {/* Section 3 */}
+            <div className="flex flex-col items-center gap-6">
+              <div className="relative w-full max-w-[320px] aspect-[418/743]">
+                <Image
+                  src="/images/546_1x_shots_so 1.svg"
                   alt="말투와 성격 설정 화면"
                   fill
                   className="object-contain"
                 />
               </div>
-              <div className="text-center max-w-xl">
-                <h3 className="text-2xl md:text-[40px] font-black text-[#AD46FF] leading-tight mb-6">
-                  말투와 성격까지 구현된다고?
-                </h3>
-                <p className="text-lg font-normal text-white leading-relaxed">
-                  트윈톡의 아바타는 LLM 활용 기술을 통해 의도된 말투와
-                  <br />
-                  성격을 지정할 수 있고, 음담패설 또는 불필요한 정보를 제한하여
-                  <br />
-                  보다 안전하게 사용할 수 있습니다.
-                </p>
+              <div className="text-center -mt-8 relative z-10 pointer-events-none">
+                <div className="pointer-events-auto">
+                  <h3 className="text-2xl font-black text-[#AD46FF] leading-tight mb-3">
+                    말투와 성격까지 구현된다고?
+                  </h3>
+                  <p className="text-base font-medium text-white/90 leading-relaxed">
+                    트윈톡의 아바타는 LLM 활용 기술을 통해 의도된 말투와
+                    <br />
+                    성격을 지정할 수 있으며, 음담패설 또는 불필요한 정보를
+                    제한하여
+                    <br />
+                    보다 안전하게 사용할 수 있습니다.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Section 4 */}
+            <div className="flex flex-col items-center gap-6">
+              <div className="text-center relative z-10 pointer-events-none">
+                <div className="pointer-events-auto">
+                  <h3 className="text-2xl font-black text-[#0184FF] leading-tight mb-3">
+                    언제 어디서나 24시간 일하는
+                    <br />
+                    AI 아바타!
+                  </h3>
+                  <p className="text-base font-medium text-white/90 leading-relaxed">
+                    AI 아바타라는 새로운 무기로, 팬들과의 소통으로 새로운
+                    수익구조를
+                    <br />
+                    만들어갈 수 있습니다. 또한, 아바타에게 비지니스 정보를
+                    주입하여
+                    <br />
+                    CS 및 세일즈 담당자로도 사용해 보세요!
+                  </p>
+                </div>
+              </div>
+              <div className="relative w-full max-w-[320px] aspect-[418/743] -mt-8">
+                <Image
+                  src="/images/909_1x_shots_so 1.svg"
+                  alt="24시간 일하는 AI 아바타 화면"
+                  fill
+                  className="object-contain"
+                />
               </div>
             </div>
           </div>
