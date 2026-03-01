@@ -8,7 +8,7 @@ function scrollTo(id: string) {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+    <div className="min-h-screen bg-black text-white overflow-x-hidden break-keep">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between h-[72px] px-6 md:px-10 bg-black/60 backdrop-blur-md">
         <div className="relative h-10 w-[200px]">
@@ -116,10 +116,7 @@ export default function Home() {
                 </h3>
                 <p className="text-base lg:text-lg font-medium text-white/90 leading-relaxed lg:leading-[2]">
                   트윈톡의 아바타는 캐릭터가 아닌, 실존 인물과 동일하며
-                  <br />
-                  목소리까지 닮은 실시간 상호작용이 가능한
-                  <br />
-                  아바타를 생성합니다!
+                  목소리까지 닮은 실시간 상호작용이 가능한 아바타를 생성합니다!
                 </p>
               </div>
               <div className="relative w-[340px] lg:w-[420px] aspect-[418/743] shrink-0 pointer-events-auto">
@@ -150,9 +147,7 @@ export default function Home() {
                   트윈톡의 아바타는 LLM 활용 기술을 통해 의도된 말투와
                   <br />
                   성격을 지정할 수 있으며, 음담패설 또는 불필요한 정보를
-                  제한하여
-                  <br />
-                  보다 안전하게 사용할 수 있습니다.
+                  제한하여 보다 안전하게 사용할 수 있습니다.
                 </p>
               </div>
             </div>
@@ -167,12 +162,8 @@ export default function Home() {
                 </h3>
                 <p className="text-base lg:text-lg font-medium text-white/90 leading-relaxed lg:leading-[2]">
                   AI 아바타라는 새로운 무기로, 팬들과의 소통으로 새로운
-                  수익구조를
-                  <br />
-                  만들어갈 수 있습니다. 또한, 아바타에게 비지니스 정보를
-                  주입하여
-                  <br />
-                  CS 및 세일즈 담당자로도 사용해 보세요!
+                  수익구조를 만들어갈 수 있습니다. 또한, 아바타에게 비지니스
+                  정보를 주입하여 CS 및 세일즈 담당자로도 사용해 보세요!
                 </p>
               </div>
               <div className="relative w-[340px] lg:w-[420px] aspect-[418/743] shrink-0 pointer-events-auto">
@@ -256,12 +247,12 @@ export default function Home() {
                     말투와 성격까지 구현된다고?
                   </h3>
                   <p className="text-base font-medium text-white/90 leading-relaxed">
-                    트윈톡의 아바타는 LLM 활용 기술을 통해 의도된 말투와
+                    트윈톡의 아바타는 LLM 활용 기술을 통해
                     <br />
-                    성격을 지정할 수 있으며, 음담패설 또는 불필요한 정보를
-                    제한하여
+                    의도된 말투와 성격을 지정할 수 있으며,
                     <br />
-                    보다 안전하게 사용할 수 있습니다.
+                    음담패설 또는 불필요한 정보를 제한하여 보다 안전하게 사용할
+                    수 있습니다.
                   </p>
                 </div>
               </div>
